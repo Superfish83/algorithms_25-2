@@ -1,0 +1,8 @@
+Search 40
+Insert 101
+Search 90
+Delete 20
+Delete 20
+Search 20
+Insert 20
+Search 20

@@ -1,0 +1,22 @@
+PERFORMANCE COMPARISON SUMMARY
+
+BST Search time (random): 0.000837ms
+Hash Table Search time (random): 0.000653ms
+BST Insert time (random): 0.000903ms
+Hash Table Insert time (random): 0.001163ms
+BST Delete time (random): 0.001092ms
+Hash Table Delete time (random): 0.000830ms
+
+BST Search time (sorted): 0.181067ms
+Hash Table Search time (sorted): 0.000893ms
+BST Insert time (sorted): 0.180668ms
+Hash Table Insert time (sorted): 0.001367ms
+BST Delete time (sorted): 0.222734ms
+Hash Table Delete time (sorted): 0.001060ms
+
+BST Search time (duplicates): 0.001322ms
+Hash Table Search time (duplicates): 0.000983ms
+BST Insert time (duplicates): 0.002047ms
+Hash Table Insert time (duplicates): 0.001453ms
+BST Delete time (duplicates): 0.001912ms
+Hash Table Delete time (duplicates): 0.001100ms
