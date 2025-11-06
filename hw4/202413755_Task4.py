@@ -159,6 +159,7 @@ def test_bellman_ford(input_path='input.txt', output_path='output.txt'):
 ############################################################
 ############################################################
 # (4) Main function
+import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
     print("============================================")
@@ -181,12 +182,33 @@ if __name__ == "__main__":
     print("Generating random test case for Bellman-Ford Algorithm...")
     print("Testing Dijkstra and Bellman-Ford Algorithms...")
 
-    gen_random_input(1000, 5000, 1, 10, 'input_random.txt')
-    t1 = test_dijkstra('input_random.txt', 'output_d_random.txt')
-    t2 = test_bellman_ford('input_random.txt', 'output_bf_random.txt')
+    N_list = [(i+1)*100 for i in range(10)]
 
-    print(f"Runtime for first test: {t1:.3f} ms")
-    print(f"Runtime for second test: {t2:.3f} ms")
+    t1 = []
+    t2 = []
+    NUM_TRIALS = 10
+    for N in N_list:
+        M = N * 5  # average degree = 5
+        t1avg = 0.0
+        t2avg = 0.0
+        for _ in range(NUM_TRIALS):
+            gen_random_input(N, M, 1, 10, 'test/input_random.txt')
+            t1avg += test_dijkstra('test/input_random.txt', 'test/output_d_random.txt')
+            t2avg += test_bellman_ford('test/input_random.txt', 'test/output_bf_random.txt')
+        t1.append(t1avg / NUM_TRIALS)
+        t2.append(t2avg / NUM_TRIALS)
+    
+    # Plot the results
+    plt.plot(N_list, t1, marker='o', label='Dijkstra')
+    plt.plot(N_list, t2, marker='o', label='Bellman-Ford')
+    plt.xlabel('Number of Nodes (N)')
+    plt.ylabel('Average Runtime (ms)')
+    plt.title('Dijkstra vs Bellman-Ford Runtime Comparison')
+    plt.legend()
+    plt.grid(True)
+    plt.savefig('figures/runtime.png')
+    plt.show()
+
 
     print("Results written to 'output_d_random.txt' and 'output_bf_random.txt'.")
 
