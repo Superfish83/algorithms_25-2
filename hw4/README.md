@@ -9,5 +9,5 @@
 
 ## How to run
 - Before running the program, you should place `input.txt` in this directory. In `input.txt`, you write the graph edges and the starting node.
-- I verified the implementation for edge cases in `test_cases/`
+- I verified the implementation for edge cases in `test/`
 - You can run the program by `$ python3 202413755_Task4.py`, and see the results in `output.txt`.

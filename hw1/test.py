@@ -13,6 +13,7 @@ IN_DIR = f"{TEST_DIR}/input"
 EXP_DIR = f"{TEST_DIR}/expected_output"
 OUT_DIR = f"{TEST_DIR}/output"
 TIME_DIR = f"{TEST_DIR}/runtime"
+FIG_DIR = "figures"
 
 TCASE_N_LIST = range(25, 501, 25)
 TCASE_COUNT = 20  # number of testcases per N
@@ -114,4 +115,4 @@ if __name__ == "__main__":
     
     # (4) Plot runtime comparison graph
     plot_runtime(runtime_data)
-    plt.savefig(f"{TEST_DIR}/result.png")
+    plt.savefig(f"{FIG_DIR}/result.png")

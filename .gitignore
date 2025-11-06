@@ -1,6 +1,3 @@
-build/
-tests/
-submissions/
 __pycache__
 *.tar
 *.zip
