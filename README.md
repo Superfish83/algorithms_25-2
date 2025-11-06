@@ -1,10 +1,6 @@
 # 2025-2 Algorithms Assignments
 
-SNU CSE
-
-Yeonjun Kim
-
-(Prof. Chenglin Fan)
+Yeonjun Kim (SNU CSE)
 
 ## Description
 
@@ -28,5 +24,5 @@ Yeonjun Kim
 - `hw4/` -> **shortest path**
     - Dijkstra algorithm
     - Bellman-Ford algorithm
-- `hw5` -> ??
-- `hw6` -> ??
+- `hw5/` -> ??
+- `hw6/` -> ??
